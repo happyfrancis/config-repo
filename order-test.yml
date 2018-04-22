@@ -1,7 +1,4 @@
-spring:
-  application:
-    name: order
-  datasource:
+datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 111111
@@ -13,3 +10,4 @@ env:
 girl:
   name: lili
   age: 27
+  
