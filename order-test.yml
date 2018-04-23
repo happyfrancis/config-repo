@@ -1,4 +1,3 @@
-
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -12,4 +11,5 @@ env:
 girl:
   name: lili
   age: 42
+
   
