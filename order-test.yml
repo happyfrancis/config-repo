@@ -1,0 +1,47 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 111111
+    url: jdbc:mysql://127.0.0.1/SpringCloud_Sell?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    password: guest
+    username: guest
+  redis:
+    host: localhost
+    port: 6379
+env:
+  test10
+girl:
+  name: lili
+  age: 20
+#hystrix:
+#  command:
+#     default:
+#       execution:
+#         isolation:
+#           thread:
+#             timeoutInMilliseconds: 3000
+      #指定某个方法超时时间
+#     getProductInfoList:
+#       execution:
+#         isolation:
+#           thread:
+#             timeoutInMilliseconds: 3000
+     #springcloud2.0和1.0不一致 http://127.0.0.1:8081/hystrix.stream
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+        loggerLevel: basic
+  hystrix:
+    enabled: true
+logging:
+   level:
+    org.springframework.cloud.openfeign: DEBUG   

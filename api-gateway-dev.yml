@@ -1,0 +1,30 @@
+#zuul:
+#全部服务忽略敏感头（全部服务都可以传递cookie）
+#  sensitive-headers: 
+#  routes:
+  #/myProduct/product/list -> /product/product/list
+#   aaaaa:
+#        path: /myProduct/**
+#        serviceId: product
+#        sensitiveHeaders:
+      #简洁写法
+#     product: /myProduct/**
+     #排除某些路由
+#  ignored-patterns:
+#       - /product/product/listForOrder
+#       - /myProduct/product/listForOrder
+#        - /**/product/listForOrder
+#management:
+#  security:
+#    enabled: false
+#超时配置 本质还是hystrix的超时配置
+#hystrix:
+#  command:
+#     default:
+#       execution:
+#         isolation:
+#           thread:
+#             timeoutInMilliseconds: 5000
+ribbon:
+  ReadTimeout: 5000
+  SocketTimeout: 5000
